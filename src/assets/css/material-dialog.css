@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+#material-dialog-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 99999998;
+}
+
+#material-dialog-background.opened {
+  display: block;
+}
+
+#material-dialog {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 500px;
+  margin: auto;
+  top: 50%;
+  padding: 20px;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 2px;
+  z-index: 99999999;
+  /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+#material-dialog h1, #material-dialog h2, #material-dialog h3, #material-dialog h4 {
+  margin: 0;
+}
+
+#material-dialog .title {
+  /*font-weight: lighter;*/
+  font-size: 15pt;
+  margin-bottom: 10px;
+}
+
+#material-dialog .body {
+  font-size: 13pt;
+  color: rgb(100, 100, 100);
+}
