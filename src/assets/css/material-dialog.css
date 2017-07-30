@@ -24,7 +24,6 @@ body.no-scroll {
   position: fixed;
   left: 0;
   right: 0;
-  width: 500px;
   margin: auto;
   top: 50%;
   padding: 20px;
@@ -34,6 +33,18 @@ body.no-scroll {
   z-index: 99999999;
   /*border: 1px solid rgba(0, 0, 0, 0.2);*/
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+#material-dialog.small {
+    width: 500px;
+}
+
+#material-dialog.medium {
+    width: 800px;
+}
+
+#material-dialog.large {
+    width: 1024px;
 }
 
 #material-dialog h1, #material-dialog h2, #material-dialog h3, #material-dialog h4 {
@@ -50,3 +61,12 @@ body.no-scroll {
   font-size: 13pt;
   color: rgb(100, 100, 100);
 }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {}

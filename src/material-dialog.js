@@ -33,6 +33,7 @@ class Dialog {
   constructor (options) {
     this.title = options.title || null
     this.body = options.body || null
+    this.size = options.size || 'small'
     this.dismissable = options.dismissable || true
     this.modalDom = createModal()
     this.prepareModal()
@@ -45,6 +46,7 @@ class Dialog {
   }
 
   prepareModal () {
+    this.modalDom.classList.add(this.size)
     this.modalDom.firstChild.innerHTML = this.title
     this.modalDom.childNodes[1].innerHTML = this.body
   }
