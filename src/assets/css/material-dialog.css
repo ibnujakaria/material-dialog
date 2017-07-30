@@ -26,7 +26,7 @@ body.no-scroll {
   right: 0;
   margin: auto;
   top: 50%;
-  padding: 20px;
+  padding: 24px;
   transform: translateY(-50%);
   background-color: white;
   border-radius: 2px;
@@ -54,12 +54,36 @@ body.no-scroll {
 #material-dialog .title {
   /*font-weight: lighter;*/
   font-size: 15pt;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #material-dialog .body {
   font-size: 13pt;
   color: rgb(100, 100, 100);
+  margin-bottom: 24px;
+}
+
+#material-dialog .actions {
+  text-align: right;
+}
+
+#material-dialog .actions button {
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+  height: 36px;
+  border-radius: 2px;
+  padding-left: 8px;
+  padding-right: 8x;
+  color: rgb(100, 100, 250);
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 64px;
+}
+
+#material-dialog .actions button:hover, #material-dialog .actions button:active {
+  background-color: rgba(180, 180, 180, 0.4);
 }
 
 /* Large devices (large desktops, 1200px and up) */

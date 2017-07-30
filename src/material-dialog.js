@@ -34,7 +34,8 @@ class Dialog {
     this.title = options.title || null
     this.body = options.body || null
     this.size = options.size || 'small'
-    this.dismissable = options.dismissable || true
+    this.actions = options.actions || []
+    this.dismissable = options.dismissable !== undefined ? options.dismissable : true
     this.modalDom = createModal()
     this.prepareModal()
     return this
@@ -49,6 +50,20 @@ class Dialog {
     this.modalDom.classList.add(this.size)
     this.modalDom.firstChild.innerHTML = this.title
     this.modalDom.childNodes[1].innerHTML = this.body
+
+    // add button
+    for (let button of this.actions) {
+      let buttonDom = document.createElement('button')
+      buttonDom.innerHTML = button.text
+      if (button.action) {
+        let me = this
+        buttonDom.addEventListener('click', function (e) {
+          e.preventDefault()
+          button.action(me)
+        })
+      }
+      this.modalDom.lastChild.appendChild(buttonDom)
+    }
   }
 
   closeFromBackground () {

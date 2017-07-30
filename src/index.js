@@ -12,7 +12,17 @@ function showSmallDialog () {
   new Dialog({
     title: 'Use Google\'s location service?',
     body: 'Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.',
-    size: 'small'
+    size: 'small',
+    actions: [
+      {
+        text: 'Disagree',
+        action: function (dialog) {
+          dialog.close()
+        }
+      },
+      {text: 'Agree'}
+    ],
+    dismissable: false
   }).show()
 }
 
@@ -31,3 +41,5 @@ function showLargeDialog () {
     size: 'large'
   }).show()
 }
+
+showSmallDialog()
