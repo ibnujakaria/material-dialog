@@ -4,7 +4,7 @@ var CleanWebPackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    snackbar: './src/material-dialog.js',
+    'material-dialog': './src/material-dialog.js',
     index: './src/index.js'
   },
   devServer: {

@@ -98,4 +98,6 @@ class Dialog {
   }
 }
 
+window.Dialog = Dialog
+
 export default Dialog
