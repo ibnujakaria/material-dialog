@@ -73,15 +73,26 @@ class Dialog {
   }
 
   close () {
-    background.classList.remove('opened')
-    document.body.classList.remove('no-scroll')
-    document.body.removeChild(this.modalDom)
+    this.modalDom.classList.remove('opened')
+    let modalDom = this.modalDom
+    setTimeout(function () {
+      background.classList.remove('opened')
+      background.classList.add('closed')
+      document.body.classList.remove('no-scroll')
+      document.body.removeChild(modalDom)
+
+      setTimeout(function () {
+        background.style.display = 'none'
+      }, 200)
+    }, 200)
   }
 
   show () {
+    background.style.display = 'block'
     background.classList.add('opened')
     document.body.appendChild(this.modalDom)
     document.body.classList.add('no-scroll')
+    this.modalDom.classList.add('opened')
     currentActiveModal = this
     return this
   }
