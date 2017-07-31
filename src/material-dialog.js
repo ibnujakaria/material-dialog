@@ -83,16 +83,30 @@ class Dialog {
 
       setTimeout(function () {
         background.style.display = 'none'
+        currentActiveModal = null
       }, 200)
     }, 200)
   }
 
   show () {
+    if (currentActiveModal) {
+      console.log('there is another active modal!')
+      return
+    }
     background.style.display = 'block'
     background.classList.add('opened')
     document.body.appendChild(this.modalDom)
     document.body.classList.add('no-scroll')
     this.modalDom.classList.add('opened')
+
+    // if the modal doesnt contain title or actions, then delete them
+    if (!this.title) {
+      this.modalDom.removeChild(this.modalDom.childNodes[0])
+    }
+
+    if (!this.actions.length) {
+      this.modalDom.removeChild(this.modalDom.childNodes[this.title ? 2 : 1])
+    }
     currentActiveModal = this
     return this
   }

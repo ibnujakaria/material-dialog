@@ -72,10 +72,10 @@ body.no-scroll {
 #material-dialog .body {
   font-size: 13pt;
   color: rgb(100, 100, 100);
-  margin-bottom: 24px;
 }
 
 #material-dialog .actions {
+  margin-top: 24px;
   text-align: right;
 }
 
