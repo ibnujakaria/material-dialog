@@ -77,12 +77,10 @@ class Dialog {
     let modalDom = this.modalDom
     setTimeout(function () {
       background.classList.remove('opened')
-      background.classList.add('closed')
       document.body.classList.remove('no-scroll')
       document.body.removeChild(modalDom)
 
       setTimeout(function () {
-        background.style.display = 'none'
         currentActiveModal = null
       }, 200)
     }, 200)
@@ -93,11 +91,15 @@ class Dialog {
       console.log('there is another active modal!')
       return
     }
-    background.style.display = 'block'
     background.classList.add('opened')
     document.body.appendChild(this.modalDom)
     document.body.classList.add('no-scroll')
-    this.modalDom.classList.add('opened')
+    this.modalDom.classList.add('closed')
+    this.modalDom.classList.remove('closed')
+
+    setTimeout(() => {
+      this.modalDom.classList.add('opened')
+    }, 100)
 
     // if the modal doesnt contain title or actions, then delete them
     if (!this.title) {

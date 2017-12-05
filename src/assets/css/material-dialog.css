@@ -12,7 +12,8 @@ body.no-scroll {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
-  transition-property: opacity;
+  visibility: hidden;
+  transition-property: opacity, visibility;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
@@ -20,6 +21,7 @@ body.no-scroll {
 #material-dialog-background.opened {
   opacity: 1;
   z-index: 99999998;
+  visibility: visible;
 }
 
 #material-dialog {
@@ -37,7 +39,8 @@ body.no-scroll {
   /*border: 1px solid rgba(0, 0, 0, 0.2);*/
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
   opacity: 0;
-  transition-property: opacity, transform;
+  visibility: hidden;
+  transition-property: visibility, opacity, transform;
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
@@ -45,6 +48,7 @@ body.no-scroll {
 #material-dialog.opened {
   transform: translateY(-50%);
   opacity: 1;
+  visibility: visible;
 }
 
 #material-dialog.small {
