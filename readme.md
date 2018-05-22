@@ -10,7 +10,7 @@ npm install --save material-dialog
 ### How To Use
 
 #### Browser
-```js
+```html
 <script src="dist/material-dialog.js"></script>
 <script>
 new Dialog({
