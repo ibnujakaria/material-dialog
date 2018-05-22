@@ -16,7 +16,7 @@ function showSmallDialog () {
     actions: [
       {
         text: 'Disagree',
-        action: function (dialog) {
+        action: dialog => {
           dialog.close()
         }
       },

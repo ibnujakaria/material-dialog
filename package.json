@@ -1,7 +1,7 @@
 {
   "name": "material-dialog",
   "version": "0.0.0",
-  "description": "A simple yet js library to show material-design dialog.",
+  "description": "A simple js library to show material-design dialog.",
   "main": "src/material-dialog.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,8 @@
   "keywords": [
     "Material",
     "design",
-    "dialog"
+    "dialog",
+    "modal"
   ],
   "author": "Ibnu Jakaria <ibnujakaria@outlook.com>",
   "license": "MIT",
